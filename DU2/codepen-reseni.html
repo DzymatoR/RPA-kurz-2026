@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA & Automation - Úkol 2</title>
+    <style>
+        /* CSS pro CodePen */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        h1 {
+            color: #64ffda;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+            font-size: 2.5em;
+        }
+
+        .intro {
+            text-align: center;
+            color: #a8b2d1;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #64ffda;
+            border-bottom: 3px solid #0a192f;
+            background: linear-gradient(90deg, rgba(100, 255, 218, 0.1), transparent);
+            padding: 10px;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 15px;
+            margin: 10px 0;
+            background: linear-gradient(145deg, #0a192f, #112240);
+            border-left: 4px solid #64ffda;
+            transition: all 0.3s;
+            border-radius: 5px;
+            color: #ccd6f6;
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+            background: linear-gradient(145deg, #112240, #1a3a52);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .link-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(145deg, #64ffda, #3dd9b3);
+            color: #0a192f;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+        }
+
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(100, 255, 218, 0.5);
+        }
+
+        .output {
+            background: linear-gradient(145deg, #0a192f, #0d1b2a);
+            color: #64ffda;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            white-space: pre-wrap;
+            font-size: 1.2em;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+
+        .input-group {
+            background: linear-gradient(145deg, #0a192f, #112240);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .input-group label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #64ffda;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #233554;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            background: #0a192f;
+            color: #ccd6f6;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: #64ffda;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+
+        .input-group select option {
+            background: #0a192f;
+            color: #ccd6f6;
+        }
+
+        .input-group button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            background: linear-gradient(145deg, #64ffda, #3dd9b3);
+            color: #0a192f;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .input-group button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(100, 255, 218, 0.5);
+        }
+
+        .input-group button:active {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+  <h1>Jakub Šmíd</h1>
+
+  <p class="intro">
+    Ahoj! Jmenuji se Jakub Šmíd a pracuji jako technolog s přesahem do IT v továrně na lepidla.
+    Zajímám mě automatizace, digitalizace, IoT, celkově technologie.
+  </p>
+
+  <h2>🚀 Oblíbené technologie</h2>
+  <ul>
+    <li>Python</li>
+    <li>AI</li>
+    <li>Blender3D</li>
+  </ul>
+
+
+  <h2>📊 Výpočet DPH</h2>
+  <div class="input-group">
+    <label>Cena bez DPH (Kč):</label>
+    <input type="number" id="cena-input" value="100" min="0" step="0.01">
+
+    <label>Sazba DPH (%):</label>
+    <select id="sazba-input">
+      <option value="21" selected>21% - základní sazba</option>
+      <option value="12">12% - snížená sazba</option>
+      <option value="0">0% - osvobozeno</option>
+    </select>
+
+    <button onclick="spocitejDPH()">Spočítat</button>
+  </div>
+  <div class="output" id="dph-output"></div>
+
+  <h2>🔢 Součet čísel</h2>
+  <div class="input-group">
+    <label>Součet čísel od 1 do:</label>
+    <input type="number" id="limit-input" value="100" min="1">
+
+    <button onclick="spocitejSoucet()">Spočítat</button>
+  </div>
+  <div class="output" id="soucet-output"></div>
+
+  <h2>🔢 Bonus: Součet sudých čísel</h2>
+  <div class="input-group">
+    <label>Součet sudých čísel od 1 do:</label>
+    <input type="number" id="limit-sude-input" value="100" min="1">
+
+    <button onclick="spocitejSoucetSudych()">Spočítat</button>
+  </div>
+  <div class="output" id="soucet-sude-output"></div>
+</div>
+
+    <script>
+        // ========================================
+        // ÚKOL 2: Funkce pro výpočet DPH
+        // ========================================
+
+        function vypocitej_dph(cena, sazba) {
+            const cenaSDph = cena * (1 + sazba / 100);
+            const zaokrouhleno = Math.round(cenaSDph * 100) / 100;
+            return zaokrouhleno;
+        }
+
+        function spocitejDPH() {
+            const cena = parseFloat(document.getElementById('cena-input').value);
+            const sazba = parseFloat(document.getElementById('sazba-input').value);
+
+            const vysledek = vypocitej_dph(cena, sazba);
+            document.getElementById('dph-output').textContent = `Cena s DPH je ${vysledek} Kč`;
+        }
+
+        // ========================================
+        // ÚKOL 3: Cyklus a součet čísel
+        // ========================================
+
+        function spocitejSoucet() {
+            const limit = parseInt(document.getElementById('limit-input').value);
+            let soucet = 0;
+
+            for (let i = 1; i <= limit; i++) {
+                soucet += i;
+            }
+
+            document.getElementById('soucet-output').textContent = `Součet čísel od 1 do ${limit} je: ${soucet}`;
+        }
+
+        // Bonus: Součet sudých čísel
+        function spocitejSoucetSudych() {
+            const limit = parseInt(document.getElementById('limit-sude-input').value);
+            let soucet = 0;
+
+            for (let i = 2; i <= limit; i += 2) {
+                soucet += i;
+            }
+
+            document.getElementById('soucet-sude-output').textContent = `Součet sudých čísel od 1 do ${limit} je: ${soucet}`;
+        }
+
+        // Automatický výpočet při načtení stránky
+        window.onload = function() {
+            spocitejDPH();
+            spocitejSoucet();
+            spocitejSoucetSudych();
+        }
+    </script>
+</body>
+</html>
