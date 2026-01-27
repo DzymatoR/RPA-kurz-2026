@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Bez názvu – Poznámkový blok",
+  "Type": "Screen",
+  "Id": "90JaIapX3UW9jdFTlov2YA",
+  "Reference": "_4SHPlIxMk-8RfwbAaq_xA/90JaIapX3UW9jdFTlov2YA",
+  "ParentRef": "_4SHPlIxMk-8RfwbAaq_xA/yhYVfAyOQE-uNpcZT2iNHw",
+  "Created": "2026-01-27T10:50:57.4109787Z",
+  "Updated": "2026-01-27T10:50:57.4109787Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
