@@ -1,0 +1,6 @@
+{
+  "Name": "DU5",
+  "ProjectType": "Process",
+  "Description": "DU5 - výpis obsahu souborů",
+  "MainFile": "Main.xaml"
+}
