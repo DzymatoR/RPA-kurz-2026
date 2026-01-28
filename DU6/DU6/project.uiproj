@@ -1,0 +1,6 @@
+{
+  "Name": "DU6",
+  "ProjectType": "Process",
+  "Description": "DU6",
+  "MainFile": "Main.xaml"
+}
