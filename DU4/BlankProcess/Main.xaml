@@ -248,15 +248,19 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uasd:FormatDateAsText DisplayName="Get the current timestamp and format it." Format="yyyy-MM-dd HH:mm:ss" sap:VirtualizedContainerService.HintSize="450,231" sap2010:WorkflowViewState.IdRef="FormatDateAsText_1" LocalizationCode="(Default)" Result="[timestamp]" Source="[Date.Now]" />
-    <Assign DisplayName="Construct the message to be written." sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[messageToWrite]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["ahoj " &amp; timestamp +vbCrLf]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="test.txt" sap:VirtualizedContainerService.HintSize="450,158" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;ahoj &quot; &amp; timestamp]" UseDefaultEncoding="False" />
+    <uasd:FormatDateAsText sap2010:Annotation.AnnotationText="generuje časové razítko" DisplayName="Get the current timestamp and format it." Format="yyyy-MM-dd HH:mm:ss" sap:VirtualizedContainerService.HintSize="450,231" sap2010:WorkflowViewState.IdRef="FormatDateAsText_1" LocalizationCode="(Default)" Result="[timestamp]" Source="[Date.Now]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uasd:FormatDateAsText>
+    <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="přidá řádek " DisplayName="Append Line" FileName="test.txt" sap:VirtualizedContainerService.HintSize="450,158" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;ahoj &quot; &amp; timestamp]" UseDefaultEncoding="False">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:AppendLine>
   </Sequence>
 </Activity>
