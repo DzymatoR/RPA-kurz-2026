@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Hledat Googlem",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "E8F9xh5htUuM5f5D9VNqMQ",
+  "Reference": "_4SHPlIxMk-8RfwbAaq_xA/E8F9xh5htUuM5f5D9VNqMQ",
+  "ParentRef": "_4SHPlIxMk-8RfwbAaq_xA/83DpQrEylEudvPaBnIFc8w",
+  "Created": "2026-01-28T14:58:44.1843862Z",
+  "Updated": "2026-01-28T14:58:44.1843862Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
