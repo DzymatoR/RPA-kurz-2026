@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Bez názvu – Poznámkový blok",
+  "Type": "App",
+  "Id": "o8McpzbFcUiaSPTf0heEcQ",
+  "Reference": "_4SHPlIxMk-8RfwbAaq_xA/o8McpzbFcUiaSPTf0heEcQ",
+  "Created": "2026-01-27T10:50:57.1682271Z",
+  "Updated": "2026-01-27T10:50:57.1682271Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
